@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyBotApplicationDemo.Models.Repositories
 {
-    public class UnitofWork :IUnitofWork
+    public class UnitofWork : IUnitofWork
     {
         private readonly BookingContext _context;
         public UnitofWork(BookingContext context)
@@ -28,20 +28,20 @@ namespace MyBotApplicationDemo.Models.Repositories
 
 
         public ILanguageRepository Languages { get; private set; }
-        public ILocationRepository Locations { get; private set; }
+        public IlocationRepository Locations { get; private set; }
         public IShowRepository Shows { get; private set; }
-       public IPricesRepository Prices { get; private set; }
-       public ITheatreRepository Theatres { get; private set; }
-      public  ITheatreCategoryRepository TheatreCategories { get; private set; }
-       public  ISeatsCategoryRepository SeatCategories { get; private set; }
-       public  ISeatRepository Seats { get; private set; }
+        public IPricesRepository Prices { get; private set; }
+        public ITheatreRepository Theatres { get; private set; }
+        public ITheatreCategoryRepository TheatreCategories { get; private set; }
+        public ISeatsCategoryRepository SeatCategories { get; private set; }
+        public ISeatRepository Seats { get; private set; }
 
-      public   IUserRepository Users { get; private set; }
-       public  IMovieDetailRepository MovieDetails { get; private set; }
-      public  IBookingDetailRepository BookingDetails { get; private set; }
+        public IUserRepository Users { get; private set; }
+        public IMovieDetailRepository MovieDetails { get; private set; }
+        public IBookingDetailRepository BookingDetails { get; private set; }
         public int Complete()
         {
-           return _context.SaveChanges();
+            return _context.SaveChanges();
         }
         public void Dispose()
         {

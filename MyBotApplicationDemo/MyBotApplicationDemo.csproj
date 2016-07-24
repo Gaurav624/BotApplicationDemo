@@ -123,6 +123,7 @@
     <Compile Include="BookingDetail.cs" />
     <Compile Include="BusinessLayer\BookingManager.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
+    <Compile Include="Entities\Booking.cs" />
     <Compile Include="Entities\MovieCollection.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -133,7 +134,9 @@
     <Compile Include="Language.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Models\Repositories\BookingDetailRepository.cs" />
+    <Compile Include="Models\Repositories\BookingRepository.cs" />
     <Compile Include="Models\Repositories\IBookingDetailRepository.cs" />
+    <Compile Include="Models\Repositories\IBookingRepository.cs" />
     <Compile Include="Models\Repositories\ILanguageRepository.cs" />
     <Compile Include="Models\Repositories\ILocationRepository.cs" />
     <Compile Include="Models\Repositories\IMovieDetailRepository.cs" />

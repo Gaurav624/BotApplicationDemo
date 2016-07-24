@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace MyBotApplicationDemo.Models.Repositories
 {
-    public class LocationRepository :Repository<Location>,ILocationRepository
+    public class LocationRepository : Repository<Location>, IlocationRepository
     {
         public LocationRepository(BookingContext context)
             : base(context)
         {
         }
 
-        public BookingContext BookingContext
+        public IEnumerable<Location> GetLocation(string location)
         {
-            get { return Context as BookingContext; }
+            return this.GetQuery<Location>().Where(x => x.Name == location);
         }
     }
 }

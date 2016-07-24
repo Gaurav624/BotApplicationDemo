@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyBotApplicationDemo.Models.Repositories
 {
-    public class  Repository<TEntity> :IRepository<TEntity> where TEntity :class
+    public class Repository<TEntity> : System.Data.Entity.DbContext, IRepository<TEntity> where TEntity : class
     {
         protected readonly DbContext Context;
 
@@ -44,12 +44,18 @@ namespace MyBotApplicationDemo.Models.Repositories
         public void Remove(TEntity entity)
         {
             Context.Set<TEntity>().Remove(entity);
-            
+
         }
 
         public void RemoveRange(IEnumerable<TEntity> entities)
         {
             Context.Set<TEntity>().RemoveRange(entities);
         }
+
+        public IQueryable<T> GetQuery<T>() where T : class
+        {
+            return this.Set<T>().AsNoTracking();
+        }
+
     }
 }

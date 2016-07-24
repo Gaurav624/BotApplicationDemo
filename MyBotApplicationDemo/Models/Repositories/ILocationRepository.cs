@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MyBotApplicationDemo.Models.Repositories
 {
-    public interface ILocationRepository :IRepository<Location>
+    public interface IlocationRepository : IRepository<Location>
     {
+        IEnumerable<Location> GetLocation(string location);
     }
 }
