@@ -18,11 +18,20 @@ namespace MyBotApplicationDemo.Models.Repositories
             get { return Context as BookingContext; }
         }
 
-        public Booking GetBooking(DateTime? dateTime, int countTicket, string location = "Hyderabad", string Movie = "Avengers", string Theatre = "PVR")
+        public Booking GetBooking(DateTime? dateTime, int countTicket, string location = "Hyderabad", string movie = "Avengers", string Theatre = "PVR")
         {
             Booking booking = new Booking();
             booking.Location = GetLocationDetails(location);
+            booking.MovieDetails = GetMovieDetails(movie);
             return booking;
+        }
+
+        private IEnumerable<MovieDetails> GetMovieDetails(string movie)
+        {
+            using (var unitofWork = new UnitofWork(BookingContext))
+            {
+                return unitofWork.MovieDetails.Get(location);
+            }
         }
 
         private IEnumerable<Location> GetLocationDetails(string location)

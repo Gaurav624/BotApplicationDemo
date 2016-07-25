@@ -13,9 +13,6 @@ namespace MyBotApplicationDemo.Models.Repositories
 
         }
 
-        public BookingContext BookingContext
-        {
-            get { return Context as BookingContext; }
-        }
+
     }
 }

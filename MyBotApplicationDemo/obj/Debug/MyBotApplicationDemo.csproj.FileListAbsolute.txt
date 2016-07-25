@@ -66,6 +66,5 @@ F:\Microsoft\Hackathon\MyBotApplicationDemo\MyBotApplicationDemo\bin\fr\Microsof
 F:\Microsoft\Hackathon\MyBotApplicationDemo\MyBotApplicationDemo\bin\ja\Microsoft.Bot.Builder.resources.dll
 F:\Microsoft\Hackathon\MyBotApplicationDemo\MyBotApplicationDemo\bin\ru\Microsoft.Bot.Builder.resources.dll
 F:\Microsoft\Hackathon\MyBotApplicationDemo\MyBotApplicationDemo\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
-F:\Microsoft\Hackathon\MyBotApplicationDemo\MyBotApplicationDemo\obj\Debug\MyBotApplicationDemo.csprojResolveAssemblyReference.cache
 F:\Microsoft\Hackathon\MyBotApplicationDemo\MyBotApplicationDemo\obj\Debug\MyBotApplicationDemo.dll
 F:\Microsoft\Hackathon\MyBotApplicationDemo\MyBotApplicationDemo\obj\Debug\MyBotApplicationDemo.pdb
